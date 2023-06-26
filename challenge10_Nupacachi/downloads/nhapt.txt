@@ -1,0 +1,42 @@
+Giáo viên : thêm,sửa, xóa, xem danh sách thông tin của người dùng,nhắn tin cho từng người.
+	Giáo viên có thể upload file bài tập lên. Các sinh viên có thể xem
+danh sách bài tập và tải file bài tập về
+	Giáo viên tạo challenge, trong đó cần thực hiện: upload lên 1 file
+txt có nội dung là 1 bài thơ, văn,..., tên file được viết dưới định
+dạng không dấu và các từ cách nhau bởi 1 khoảng trắng. Sau đó
+nhập gợi ý về challenge và submit.
+
+Sinh viên: thay đổi thông tin của mình, xem danh sách thông tin người dùng, ntin,
+	Sinh viên có thể upload bài làm tương ứng với bài tập được giao.
+Chỉ giáo viên mới nhìn thấy danh sách bài làm này (1đ).
+	Sinh viên xem gợi ý và nhập đáp án. Khi sinh viên nhập đúng thì
+trả về nội dung bài thơ, văn,... lưu trong file đáp án
+
+======================================
+Tạo 1 trang đăng nhập:
+ - Nếu là teacher => chuyển đến trang admin.php	v
+ -Nếu là student => Chuyển đến trang studen.php v
+Tạo giao diện cho admin.php :
+ - Có hiển thị thông tin user v
+ - Có phần thêm user v
+ - Có phần xóa user v
+ - Có phần sửa user v
+ - Có chức năng xem thông tin chi tiết v
+ -Có chức năng giao bài x
+ - Có chức năng tạo trò giải đố x
+Tạo giao diện cho user.php
+ -Có chức năng hiển thị all thông tin user v
+ -Có chức năng sửa thông tin x
+ - Có chức năng xem thông tin chi tiết v
+  -Có chức năng nộp bài
+======================================
+ Yêu cầu chức năng phụ: 
+     Chức năng xem thông tin chi tiết:
+		Hiển thị thông tin của user đó v
+		Hiển thị thanh chat với các user đó x
+     Chức năng giao và trả bài:
+		Giaso viên up bài tập lên x
+		Học sinh down về x
+     Chức năng tạo giải đố: 
+		Giáo viên tạo tải file lên + tên đề tài + hint x 
+		Học sinh xem hint + điền đáp án ( nếu đúng thì hiện nôi dung file) x 

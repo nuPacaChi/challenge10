@@ -1,0 +1,46 @@
+Thông tin để triết xuất :
+1) DebugSize: Biểu thị kích thước của thư mục gỡ lỗi
+bàn. Thông thường, các tệp thực thi liên quan đến Microsoft có một
+thư mục gỡ lỗi. Do đó nhiều chương trình sạch có thể có
+một giá trị khác không cho DebugSize
+2) ImageVersion: Biểu thị phiên bản của tập tin. Nó là do người dùng định nghĩa và không liên quan đến chức năng của chương trình.
+Nhiều chương trình sạch có nhiều phiên bản hơn và dung lượng lớn hơn
+bộ image-version . Hầu hết phần mềm độc hại đều có ImageVersion
+giá trị của 0
+3) IatRVA: Biểu thị địa chỉ ảo tương đối của
+bảng địa chỉ nhập khẩu. Giá trị của tính năng này là 4096
+đối với hầu hết các tệp sạch và 0 hoặc giá trị rất lớn đối với vi-rút
+các tập tin. Nhiều phần mềm độc hại có thể không sử dụng chức năng nhập hoặc
+có thể làm xáo trộn các bảng nhập của chúng[23]
+4) ExportSize:  Thường xuyên,
+chỉ các tệp DLL, không phải chương trình thực thi, có bảng xuất.
+Do đó, giá trị của tính năng này có thể khác không đối với sạch
+các tệp chứa nhiều tệp DLL và 0 cho các tệp vi-rút
+5) RéourceSize: Biểu thị kích thước của phần tài nguyên.
+Một số tệp vi-rút có thể không có tài nguyên. Tập tin sạch có thể
+có tài nguyên lớn hơn
+6) VirtualSize2: 
+Nhiều virus chỉ có một phần và giá trị của
+trường này là 0 đối với chúng
+7) NumberOfSections: Các
+giá trị của tính năng này khác nhau trong cả tệp vi-rút và tệp sạch
+và không rõ tính năng này giúp ích như thế nào khi kiểm tra
+phần mềm độc hại riêng biệt và các tập tin sạch sẽ.
+
+
+=>Rút ra được các thông tin cần được triết xuất làm đặc trưng trong pefile
+
+1.Major Image Version: Được sử dụng để chỉ số phiên bản chính của ứng dụng, ví dụ như trong phiên bản Microsoft Excel 4.0, giá trị sẽ là 4.
+2.Virtual Address và Size của IMAGE_DATA_DIRECTORY: Thông tin này cho biết vị trí và kích thước của bảng mô tả cấu trúc của file được lưu trữ trong bộ nhớ.
+3.OS Version: Phiên bản hệ điều hành mà mã độc đang chạy trên nó.
+4.Import Address Table Address: Địa chỉ bảng thực hiện lệnh nhập, cho biết các hàm được sử dụng bởi chương trình.
+5.Resources Size: Kích thước tài nguyên được sử dụng bởi chương trình.
+6.Number Of Sections: Số lượng các phần của file.
+7.Linker Version: Phiên bản liên kết chương trình.
+8.Size of Stack Reserve: Kích thước tối đa của vùng nhớ dành cho Stack được đặt riêng cho quá trình này.
+9.DLL Characteristics: Đặc điểm của Dynamic Link Library, định nghĩa các thuộc tính cho file.
+10.Export Table Size and Address: Địa chỉ và kích thước của bảng xuất khẩu, cho biết các hàm được sử dụng bởi các chương trình khác.
+11.Address of Entry Point: Địa chỉ điểm nhập của chương trình.
+12.Image Base: Địa chỉ bắt đầu của file thực thi.
+13.Number Of Import DLL: Số lượng thư viện nhập được sử dụng bởi chương trình.
+14.Number Of Import Functions: Số lượng hàm được sử dụng bởi chương trình.
